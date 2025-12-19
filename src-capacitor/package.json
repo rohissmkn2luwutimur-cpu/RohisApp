@@ -1,0 +1,13 @@
+{
+  "name": "rohis-app",
+  "version": "0.0.1",
+  "description": "sebuah project untuk organisasi rohis",
+  "author": "fajar",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}
