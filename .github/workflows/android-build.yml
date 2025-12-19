@@ -1,9 +1,11 @@
 name: Build Android APK
 
 on:
+  # Agar jalan otomatis saat push ke 'main'
   push:
-    branches:
-      - master
+    branches: [ "main" ]
+  # Agar muncul tombol 'Run workflow' (Play Manual)
+  workflow_dispatch:
 
 jobs:
   build:
@@ -36,8 +38,8 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      - name: Upload APK to GitHub
+      - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
-          name: app-debug.apk
+          name: aplikasi-rohis
           path: src-capacitor/android/app/build/outputs/apk/debug/app-debug.apk
